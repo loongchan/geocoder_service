@@ -1,5 +1,6 @@
 from http.server import BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs, quote_plus
+from apps.utils.config import Config
 import json
 
 from urllib import request
@@ -12,7 +13,7 @@ class GetRequestHandler(BaseHTTPRequestHandler):
         if query.get("address") is None:
             return None
 
-        apiKey = '<YOUR API KEY>'
+        apiKey = Config().configs['Geocoders'][0]['Google']['apiKey']
         full_uri = 'https://maps.googleapis.com/maps/api/geocode/json?key=' + apiKey + '&address=' + quote_plus(query.get('address')[0])
         answer = request.urlopen(full_uri)
         answer_json = answer.read().decode('utf-8')
