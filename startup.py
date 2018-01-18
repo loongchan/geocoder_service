@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-import os, sys
+import os
+import sys
 
 package_directory = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.join(package_directory, 'apps'))

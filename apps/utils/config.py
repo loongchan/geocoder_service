@@ -10,6 +10,7 @@ class Config:
             grandma_path = os.path.dirname(os.path.dirname(cur_path))
             conf_path = os.path.join(grandma_path, "geocoder_config.json")
 
+            # save results to configs
             conf_File = open(conf_path)
             self.configs = json.loads(conf_File.read())
             conf_File.close()

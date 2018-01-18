@@ -1,20 +1,19 @@
 {
-  "Geocoders": [
-    {
+  "Geocoders": {
       "Google": {
         "apiParameter": "key",
         "apiKey": "<Put Your API Key Here>",
         "extras": "",
-        "uri": "https://maps.googleapis.com/maps/api/geocode/json",
+        "url": "https://maps.googleapis.com/maps/api/geocode/json",
         "queryParameter": "address"
       },
       "Here": {
         "param": "app_id",
         "apiKey": "<Put Your App ID Key Here",
         "extras": "app_code=<Put Your App Code >",
-        "uri": "https://geocoder.cit.api.here.com/6.2/geocode.json",
+        "url": "https://geocoder.cit.api.here.com/6.2/geocode.json",
         "queryParameter": "searchtext"
       }
-    }
-  ]
+  }
+
 }
