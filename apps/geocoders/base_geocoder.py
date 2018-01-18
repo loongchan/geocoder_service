@@ -49,7 +49,7 @@ class BaseGeocoder(ABC):
                 json_answer = json.loads(answer.read().decode('utf-8'))
                 lat, lng = self.get_lat_lng(json_answer)
 
-                return '{lat:' + str(lat) + ', long:' + str(lng) + '}'
+                return '{lat:' + str(lat) + ', lng:' + str(lng) + '}'
 
             except Exception:
                 print("Whoops, something went wrong with " + __name__)
