@@ -4,9 +4,6 @@ import json
 class Google(BaseGeocoder):
     """Google's flavour of geocoder"""
 
-    def get_own_name(self):
-        return "Google"
-
     def get_lat_lng(self, param_json: json)-> tuple:
         """extract response lat long"""
 

@@ -14,9 +14,9 @@ class BaseGeocoder(ABC):
         self.address = param_address
         self.own_name = __name__
 
-    @abstractmethod
-    def get_own_name(self):
-        pass
+    @classmethod
+    def get_own_name(cls):
+        return str(cls.__name__)
 
     def get_full_url(self, which_geocoder: str) -> str:
         """create implementation specific URL"""

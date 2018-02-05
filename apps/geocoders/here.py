@@ -4,10 +4,6 @@ import json
 class Here(BaseGeocoder):
     """Here's flavour of geocoder"""
 
-    def get_own_name(self):
-        return "Here"
-
-
     def get_full_url(self) -> str:
         base_url = super().get_full_url()
 
